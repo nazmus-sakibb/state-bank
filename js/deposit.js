@@ -2,6 +2,8 @@
  * 1. add event listener to the deposit button
  * 2. get input value from deposit field
  * 3. clear deposit input field
+ * 4. get the previous deposit total
+ * 5. calculate and set the new deposit total
  */
 
 // step 1
@@ -14,4 +16,11 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     depositField.value = '';
 
     // step 4
+    const depositTotalElement = document.getElementById('deposit-total');
+    const previousDepositTotal = parseFloat(depositTotalElement.innerText);
+    
+
+    // step 5
+    const newDepositTotal = previousDepositTotal + newDepositAmount;
+    depositTotalElement.innerText = newDepositTotal;
 })
