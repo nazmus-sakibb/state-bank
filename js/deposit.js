@@ -23,4 +23,6 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     // step 5
     const newDepositTotal = previousDepositTotal + newDepositAmount;
     depositTotalElement.innerText = newDepositTotal;
+
+    step 6
 })
