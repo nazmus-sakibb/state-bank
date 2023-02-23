@@ -5,6 +5,7 @@
  * 4. get previous withdraw total
  * 5. calulate and set total withdraw
  * 6. get previous balance
+ * 7. calculate and set the new balance
  */
 
 
@@ -25,4 +26,12 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     // step 5
     const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
     withdrawTotalElement.innerText = newWithdrawTotal;
+
+    // step 6
+    const balanceElement = document.getElementById('balance-total')
+    const previousBalanceTotal = parseFloat(balanceElement.innerText);
+
+    // step 7
+    const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+    balanceElement.innerText = newBalanceTotal;
 })
