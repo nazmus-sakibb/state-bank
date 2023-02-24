@@ -8,14 +8,17 @@ function getInputFieldValueById(inputId){
 function getElementValueById(elementId){
     const element = document.getElementById(elementId);
     const elementValue = parseFloat(element.innerText);
-    element.innerText = '';
     return elementValue;
 }
 
 document.getElementById('btn-deposit').addEventListener('click', function(){
-    const newDepositAmount = getInputFieldValueById('deposit-feild');
+    const newDepositAmount = getInputFieldValueById('deposit-field');
 
     // get previous deposit total
     const previousDepositTotal = getElementValueById('deposit-total');
-    console.log(newDepositAmount, previousDepositTota);
+    
+
+    // calculate new deposit total
+    const newDepositTotal = previousDepositTotal + newDepositAmount;
+    
 })
