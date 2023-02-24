@@ -1,6 +1,7 @@
-function getInputValueById(inputId){
+function getInputFieldValueById(inputId){
     const inputField = document.getElementById(inputId);
-    return inputField;
+    const inputFieldValue = parseFloat(inputField.value);
+    return inputFieldValue;
 }
 
 document.getElementById('btn-deposit').addEventListener('click', function(){
