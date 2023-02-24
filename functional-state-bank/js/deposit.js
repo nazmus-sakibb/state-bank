@@ -5,5 +5,5 @@ function getInputFieldValueById(inputId){
 }
 
 document.getElementById('btn-deposit').addEventListener('click', function(){
-    console.log('deposit');
+    const newDepositAmount = getInputFieldValueById('deposit-feild');
 })
